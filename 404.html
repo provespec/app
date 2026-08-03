@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Parity — ProveSpec</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Open any specification in the ProveSpec catalog and read it as a graded capability tree."
+    />
+    <!--
+      Looser than the Electron renderer's policy by exactly one directive: the browser shell
+      fetches the catalog over the network, which the desktop app never does.
+    -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self' https://provespec.com; img-src 'self' data:"
+    />
+    <script type="module" crossorigin src="/assets/index-zv-eqHH2.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CVA_YMcU.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
