@@ -11,13 +11,18 @@
     <!--
       Looser than the Electron renderer's policy by exactly one directive: the browser shell
       fetches the catalog over the network, which the desktop app never does.
+
+      localhost is allowed so the shell can be pointed at a locally built catalog
+      (`pnpm site:preview` + VITE_PROVESPEC_SITE) and an unpublished change can be looked at
+      before it is public. It grants nothing to a remote page — a site cannot reach the
+      visitor's localhost through this.
     -->
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self' https://provespec.com; img-src 'self' data:"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self' https://provespec.com http://localhost:* http://127.0.0.1:*; img-src 'self' data:"
     />
-    <script type="module" crossorigin src="/assets/index-zv-eqHH2.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CVA_YMcU.css">
+    <script type="module" crossorigin src="/assets/index-CPknj0N-.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-vPj21WIw.css">
   </head>
   <body>
     <div id="root"></div>
